@@ -1,9 +1,20 @@
-###Picture Library App
-##A simple and user-friendly picture library app built with React.
+# Picture Library
 
-**Features**
+This is the code for my picture library app.
 
+## Technologies Used
+- unsplash API
+- JavaScript
+- [React](https://reactjs.org/)
+- [Node.js](https://nodejs.org/)
+
+
+## Features
+- Responsive design for mobile devices
+- Cool animated sections.
+- Contact buttons for visitors to get in touch.
 - Browse and view a collection of pictures
 - Search for specific pictures by keyword
-- Upload your own pictures to the library
 - Download pictures to your device
+
+
