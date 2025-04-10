@@ -1,0 +1,161 @@
+.photo-container {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+}
+
+.photo-container:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--dark-shadow);
+}
+
+.photo-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.photo-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.photo-container:hover .photo-image {
+  transform: scale(1.05);
+}
+
+.photo-actions {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.action-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--clr-grey-1);
+}
+
+.action-btn:hover {
+  background-color: var(--clr-white);
+  transform: scale(1.1);
+}
+
+.action-btn.favorite {
+  color: var(--clr-red-light);
+}
+
+.collection-dropdown {
+  position: relative;
+}
+
+.collection-options {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  background-color: var(--clr-white);
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  padding: 0.5rem;
+  min-width: 150px;
+  display: none;
+  z-index: 20;
+}
+
+.collection-dropdown:hover .collection-options {
+  display: block;
+}
+
+.collection-option {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: var(--radius);
+}
+
+.collection-option:hover {
+  background-color: var(--clr-grey-10);
+}
+
+.photo-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: var(--clr-white);
+  z-index: 5;
+}
+
+.photo-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-details h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.user-details p {
+  margin: 0;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Masonry layout styles */
+.masonry .photo-container {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .photo-actions {
+    flex-direction: row;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  
+  .action-btn {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+} 
